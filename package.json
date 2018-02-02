@@ -1,0 +1,23 @@
+{
+  "name": "azure-chaos",
+  "version": "1.0.0",
+  "description": "introduce chaos into elements of the azure platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "azure",
+    "chaos"
+  ],
+  "author": "Ben Greenier",
+  "license": "MIT",
+  "dependencies": {
+    "deep-equal": "^1.0.1",
+    "find-up": "^2.1.0",
+    "yargs": "^11.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^5.0.0"
+  }
+}
