@@ -16,7 +16,7 @@ factory.Logger.configure({
 })
 
 // finally, run the yargs command pipeline or show help
-require('yargs')
+const shellArgs = require('yargs')
     .commandDir('./commands')
     .usage('azchaos [command] [args]')
     .help('--help')

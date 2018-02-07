@@ -26,6 +26,7 @@ exports.builder = {
 exports.handler = (argv) => {
     const registry = factory.ExtensionRegistry.create()
     const rp = factory.RequestProcessor.create()
+    const logger = factory.Logger.create()
 
     registry
         .get({extensionName: argv.extension})
@@ -37,4 +38,10 @@ exports.handler = (argv) => {
                 accessToken: argv.accessToken
             })
         })
+        .then((res) => {
+            if (res.statusCode !== 200) {
+                throw new Error(`Invalid Status ${res.statusCode}`)
+            }
+        })
+        .then(logger.info.bind(logger), logger.error.bind(logger))
 }
