@@ -14,6 +14,9 @@ factory.ExtensionRegistry.configure({
 factory.Logger.configure({
     logImpl: console.log
 })
+factory.AzureAuthenticator.configure({
+    msRestImpl: require('ms-rest-azure')
+})
 
 // finally, run the yargs command pipeline or show help
 const shellArgs = require('yargs')

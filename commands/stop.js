@@ -18,25 +18,31 @@ exports.builder = {
   },
   accessToken: {
     description: `short-lived access token to pass to the chaos event`,
-    required: true,
+    required: false,
     type: 'string'
   }
 }
 
 exports.handler = (argv) => {
+    const authenticator = factory.AzureAuthenticator.create()
     const registry = factory.ExtensionRegistry.create()
     const rp = factory.RequestProcessor.create()
     const logger = factory.Logger.create()
 
+    const asyncAuthProvider = argv.accessToken ? Promise.resolve(argv.accessToken) : authenticator.interactive()
+
     registry
         .get({extensionName: argv.extension})
         .then((ext) => {
-            return rp.stop({
-                extensionUri: ext.uri,
-                authKey: argv.key,
-                resources: argv.resources,
-                accessToken: argv.accessToken
-            })
+            return asyncAuthProvider
+                .then((accessToken) => {
+                    return rp.stop({
+                        extensionUri: ext.uri,
+                        authKey: argv.key,
+                        resources: argv.resources,
+                        accessToken: accessToken
+                    })
+                })
         })
         .then((res) => {
             if (res.statusCode !== 200) {

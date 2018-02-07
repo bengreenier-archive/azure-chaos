@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "chalk": "^2.3.0",
+    "ms-rest-azure": "^2.5.2",
     "request": "^2.83.0",
     "yargs": "^11.0.0"
   },
