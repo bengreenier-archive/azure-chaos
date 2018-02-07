@@ -1,0 +1,9 @@
+{
+    "extensions": [
+        {
+            "name": "test",
+            "uri": "http://localhost:3000",
+            "desc": "test.com extension"
+        }
+    ]
+}
