@@ -61,6 +61,6 @@ typings/
 # dotenv environment variables file
 .env
 
+.chaos-extensions.json
 
-
-# End of https://www.gitignore.io/api/node.chaos-extensions.json
+# End of https://www.gitignore.io/api/node
