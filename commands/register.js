@@ -4,7 +4,17 @@ exports.command = 'register <name> <uri> [desc]'
 
 exports.describe = 'register a chaos extension'
 
-exports.builder = {}
+exports.builder = {
+    name: {
+        description: 'the unique name of the extension'
+    },
+    uri: {
+        description: 'the extension uri'
+    },
+    desc: {
+        description: 'the brief extension description'
+    }
+}
 
 exports.handler = (argv) => {
     const registry = factory.ExtensionRegistry.create()

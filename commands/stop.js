@@ -5,22 +5,25 @@ exports.command = 'stop <extension> [key]'
 exports.describe = 'stops some chaos'
 
 exports.builder = {
-  key: {
-      description: `optional extension authorization key\n
-        https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-http-webhook#api-key-authorization`,
-      required: false,
-      type: 'string'
-  },
-  resources: {
-      description: `target resource ids in the form of subscription/resourceGroup/resourceId`,
-      required: true,
-      type: 'array'
-  },
-  accessToken: {
-    description: `short-lived access token to pass to the chaos event`,
-    required: false,
-    type: 'string'
-  }
+    extension: {
+        description: 'the name of the extension to start'
+    },
+    key: {
+        description: `optional extension authorization key\n
+            https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-http-webhook#api-key-authorization`,
+        required: false,
+        type: 'string'
+    },
+    resources: {
+        description: `target resource ids in the form of subscription/resourceGroup/resourceId`,
+        required: true,
+        type: 'array'
+    },
+    accessToken: {
+        description: `short-lived access token to pass to the chaos event`,
+        required: false,
+        type: 'string'
+    }
 }
 
 exports.handler = (argv) => {

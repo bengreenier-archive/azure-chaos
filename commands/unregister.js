@@ -4,7 +4,11 @@ exports.command = 'unregister <name>'
 
 exports.describe = 'unregister a chaos extension'
 
-exports.builder = {}
+exports.builder = {
+    name: {
+        description: 'the name of the extension to unregister'
+    },
+}
 
 exports.handler = (argv) => {
     const registry = factory.ExtensionRegistry.create()
