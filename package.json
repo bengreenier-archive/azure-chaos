@@ -1,7 +1,7 @@
 {
   "name": "azure-chaos",
   "version": "1.0.0",
-  "description": "the orchestrator for azure-chaos-fn extensions",
+  "description": "a tool for introducing chaos into the Azure PaaS using configurable extensions",
   "main": "index.js",
   "bin": {
     "azchaos": "bin/azchaos.js"
