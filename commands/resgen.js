@@ -25,5 +25,5 @@ exports.handler = (argv) => {
         argv.resName
     ]
 
-    logger.raw(parts.filter(p => p).join('/'))
+    return logger.raw(parts.filter(p => p).join('/'))
 }

@@ -14,7 +14,7 @@ exports.handler = (argv) => {
     const registry = factory.ExtensionRegistry.create()
     const logger = factory.Logger.create()
     
-    registry
+    return registry
         .unregister({
             extensionName: argv.name
         })

@@ -34,7 +34,7 @@ exports.handler = (argv) => {
 
     const asyncAuthProvider = argv.accessToken ? Promise.resolve(argv.accessToken) : authenticator.interactive()
 
-    registry
+    return registry
         .get({extensionName: argv.extension})
         .then((ext) => {
             return asyncAuthProvider
