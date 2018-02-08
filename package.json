@@ -1,6 +1,6 @@
 {
   "name": "azure-chaos",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "a tool for introducing chaos into the Azure PaaS using configurable extensions",
   "main": "index.js",
   "bin": {
@@ -10,6 +10,7 @@
     "chalk": "^2.3.0",
     "ms-rest-azure": "^2.5.2",
     "request": "^2.83.0",
+    "table": "^4.0.2",
     "yargs": "^11.0.0"
   },
   "devDependencies": {

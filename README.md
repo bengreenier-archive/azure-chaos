@@ -14,6 +14,7 @@ To install, use `npm i -g azure-chaos`. Then use `azchaos` to invoke.
 azchaos [command] [args]
 
 Commands:
+  azchaos.js list [search]                        lists registered extensions
   azchaos.js register <name> <uri> [desc]         register a chaos extension
   azchaos.js resgen <subId> [resGroup] [resName]  create a properly formatted resource identifier
   azchaos.js start <extension> [key]              starts some chaos
@@ -42,6 +43,14 @@ all the extensions the tool is aware of and able to run. Use __register__ to add
 
 ```
 azchaos register myextension https://myextension.com "a description of my extension"
+```
+
+## list
+
+Lists all the registered extensions by printing them to `stdout`.
+
+```
+azchaos list [search]
 ```
 
 ## unregister
