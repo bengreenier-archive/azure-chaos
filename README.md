@@ -4,7 +4,7 @@ a tool for introducing chaos into the Azure PaaS using configurable extensions :
 
 ![readme logo](https://github.com/bengreenier/azure-chaos/raw/master/readme_logo.gif)
 
-`azchaos` is a lightweight tool for running extensions that implements a [given API](https://rebilly.github.io/ReDoc/?url=https://raw.githubusercontent.com/bengreenier/azure-chaos/master/swagger.yml) with
+`azchaos` is a lightweight tool for running extensions that implements a [given API](https://rebilly.github.io/ReDoc/?url=https://raw.githubusercontent.com/bengreenier/azure-chaos/master/swagger.yaml) with
 the expectation that they introduce chaos into Azure.
 
 To install, use `npm i -g azure-chaos`. Then use `azchaos` to invoke.
@@ -29,7 +29,7 @@ Learn more @ https://github.com/bengreenier/azure-chaos
 
 To learn more about authoring extensions, take a look at these resources:
 
-+ [expected API](https://rebilly.github.io/ReDoc/?url=https://raw.githubusercontent.com/bengreenier/azure-chaos/master/swagger.yml) - the OpenAPI doc for extensions
++ [expected API](https://rebilly.github.io/ReDoc/?url=https://raw.githubusercontent.com/bengreenier/azure-chaos/master/swagger.yaml) - the OpenAPI doc for extensions
 + [azure-chaos-fn](https://github.com/bengreenier/azure-chaos-fn) - javascript sdk to make extension development easier
 + [azure-chaos-fn-webapp-startstop](https://github.com/trstringer/azure-chaos-fn-webapp-startstop) - a simple extension written in javascript
 
