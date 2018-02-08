@@ -38,7 +38,7 @@ To learn more about authoring extensions, take a look at these resources:
 
 ## register
 
-Creates and/or updates a `.chaos-extensions.json` file in the working directory. This file represents
+Creates and/or updates a `~/.chaos-extensions.json` file. This file represents
 all the extensions the tool is aware of and able to run. Use __register__ to add new extensions:
 
 ```
@@ -47,7 +47,7 @@ azchaos register myextension https://myextension.com "a description of my extens
 
 ## list
 
-Lists all the registered extensions by printing them to `stdout`.
+Lists all the registered extensions by printing them to `stdout`. Optionally filters by `search` term.
 
 ```
 azchaos list [search]
@@ -55,7 +55,7 @@ azchaos list [search]
 
 ## unregister
 
-Updates a `.chaos-extensions.json` file in the working directory. This file represents
+Updates a `~/.chaos-extensions.json` file. This file represents
 all the extensions the tool is aware of and able to run. Use __unregister__ to remove extensions:
 
 ```

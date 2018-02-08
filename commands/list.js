@@ -15,7 +15,7 @@ exports.handler = (argv) => {
     const registry = factory.ExtensionRegistry.create()
     const logger = factory.Logger.create()
     
-    const term = argv.search.toString()
+    const term = (argv.search || '').toString()
 
     return registry
         .getAll()

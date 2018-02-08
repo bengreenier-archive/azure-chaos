@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+const home = require('home')
 const yargs = require('yargs')
 const factory = require('../lib/factory')
 const pkgJson = require('../package.json')
@@ -11,7 +12,7 @@ factory.RequestProcessor.configure({
 })
 factory.ExtensionRegistry.configure({
     fsImpl: require('fs'),
-    fsLocation: process.cwd() + '/.chaos-extensions.json'
+    fsLocation: home.resolve('~/.chaos-extensions.json')
 })
 factory.Logger.configure({
     logImpl: console.log
