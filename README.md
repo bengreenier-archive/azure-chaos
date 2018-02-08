@@ -18,6 +18,8 @@ Commands:
   azchaos.js resgen <subId> [resGroup] [resName]  create a properly formatted resource identifier
   azchaos.js start <extension> [key]              starts some chaos
   azchaos.js stop <extension> [key]               stops some chaos
+  azchaos.js token                                interactively authentiate the user, and print
+                                                  an accessToken to stdout
   azchaos.js unregister <name>                    unregister a chaos extension
 
 Options:
@@ -81,6 +83,14 @@ will be output to `stdout`.
 
 ```
 azchaos resGen mySubId myResGroupName myResName
+```
+
+## token
+
+Interactively authenticates the user, and prints the valid `accessToken` to `stdout`. This `accessToken` can be used as the `--accessToken <value>` in the [start](#start) and [stop](#stop) commands.
+
+```
+azchaos token
 ```
 
 ## License

@@ -1,6 +1,6 @@
 {
   "name": "azure-chaos",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a tool for introducing chaos into the Azure PaaS using configurable extensions",
   "main": "index.js",
   "bin": {
